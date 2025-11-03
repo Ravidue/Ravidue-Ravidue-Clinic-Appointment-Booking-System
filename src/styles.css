@@ -1,0 +1,94 @@
+:root{
+  --bg:#f6f7fb;
+  --panel:#fff;
+  --muted:#8b93a7;
+  --accent:#5b7cff;
+  --card-shadow: 0 6px 18px rgba(29,31,41,0.06);
+}
+
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:#223}
+
+.app-root{display:flex;min-height:100vh}
+.sidebar{width:220px;background:#fff;border-right:1px solid #eef1f6;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-dot{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#7b61ff,#3ed5b7)}
+.brand h1{font-size:18px;margin:0}
+.nav{margin-bottom:720px;display:flex;flex-direction:column;gap:10px}
+.nav-item{padding:10px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+.nav-item.active{background:#5b7cff;color:#fff}
+.sidebar-footer{font-size:12px;color:var(--muted);margin-top:20px}
+
+.main-area{flex:1;display:flex;flex-direction:column}
+.header-bar{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid #eef1f6;background:transparent}
+.search input{padding:10px 14px;border-radius:10px;border:1px solid #e8edf3;min-width:300px}
+.header-right{display:flex;gap:12px;align-items:center}
+.icon-pill{padding:8px;border-radius:8px;background:#fff;box-shadow:var(--card-shadow)}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#ffd29d,#ff8a8a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+
+.dashboard-container{padding:24px}
+.cards-row{display:flex;gap:18px;margin-bottom:18px}
+.stat-card{background:var(--panel);padding:16px;border-radius:12px;flex:1;box-shadow:var(--card-shadow)}
+.stat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.stat-title{color:var(--muted)}
+.stat-value{font-size:22px;font-weight:700}
+.stat-change.up{color:#16a34a}
+.stat-change.down{color:#ef4444}
+
+.grid.two-cols{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.panel{background:var(--panel);padding:18px;border-radius:12px;box-shadow:var(--card-shadow)}
+.stats-panel h3{margin-top:0}
+.stats-cards{display:flex;gap:10px;margin:12px 0}
+.stat{flex:1;background:#fbfcff;border-radius:10px;padding:12px;text-align:center}
+
+.chart-placeholder{padding:10px 4px}
+.bar-row{display:flex;gap:6px;align-items:end;height:160px;padding:6px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center}
+.bar-inner{width:100%;border-radius:6px}
+.bar-inner.size-1{height:20px;background:linear-gradient(180deg,#baf6e1,#60d5b3)}
+.bar-inner.size-2{height:40px;background:linear-gradient(180deg,#9feff0,#4fb1e6)}
+.bar-inner.size-3{height:70px;background:linear-gradient(180deg,#b3d6ff,#5b7cff)}
+.bar-inner.size-4{height:90px;background:linear-gradient(180deg,#a7f3d0,#34d399)}
+.bar-inner.size-5{height:120px;background:linear-gradient(180deg,#c7b3ff,#8b61ff)}
+.bar-inner.size-6{height:150px;background:linear-gradient(180deg,#f7b7b7,#ff8a8a)}
+.bar-label{font-size:11px;color:var(--muted);margin-top:6px}
+.legend{display:flex;gap:12px;margin-top:8px;color:var(--muted);font-size:13px}
+.legend-item i{display:inline-block;width:12px;height:12px;background:#5b7cff;margin-right:6px;border-radius:3px}
+
+.popular-doctors{display:flex;gap:12px;margin-top:12px}
+.doc-card{flex:1;background:#fff;padding:12px;border-radius:10px;box-shadow:var(--card-shadow);text-align:left}
+.doc-name{font-weight:700}
+.doc-sub{font-size:13px;color:var(--muted)}
+.doc-book{margin-top:8px;color:var(--muted)}
+
+.side-panel .panel-header{font-weight:700;margin-bottom:12px}
+.calendar{background:#f8fafc;padding:12px;border-radius:8px}
+.month{font-weight:700;color:var(--muted);margin-bottom:8px}
+.days-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{padding:8px;border-radius:6px;text-align:center;color:var(--muted);background:#fff}
+.day.today{background:#5b7cff;color:#fff}
+
+.upcoming-list{margin-top:12px}
+.appt{background:#fff;padding:10px;border-radius:8px;margin-bottom:8px}
+.appt-title{font-weight:700}
+.appt-time{font-size:13px;color:var(--muted)}
+
+.appointments-panel{margin-top:18px}
+.appt-table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:8px;overflow:hidden}
+.appt-table th, .appt-table td{padding:12px;text-align:left;border-bottom:1px solid #eef1f6}
+.td-doc{display:flex;gap:10px;align-items:center}
+.avatar-sm{width:36px;height:36px;border-radius:50%;background:#eef2ff;display:flex;align-items:center;justify-content:center}
+.doc-name{font-weight:700}
+.doc-special{font-size:12px;color:var(--muted)}
+.patient-phone{font-size:12px;color:var(--muted)}
+.status-pill{padding:6px 10px;border-radius:999px;font-size:12px}
+.status-confirmed{background:#e6ffed;color:#166534}
+.status-cancelled{background:#fff0f0;color:#b91c1c}
+.status-checkedout{background:#f0f9ff;color:#0369a1}
+.status-schedule{background:#fff7ed;color:#92400e}
+
+/* Responsive tweaks */
+@media(max-width:1000px){
+  .grid.two-cols{grid-template-columns:1fr}
+  .sidebar{display:none}
+}
